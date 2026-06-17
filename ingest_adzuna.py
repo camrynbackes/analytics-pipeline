@@ -25,7 +25,7 @@ SEARCH_TERMS = [
     "product analyst"
 ]
 
-def fetch_jobs(pages=5):
+def fetch_jobs(pages=10):
     all_jobs = []
 
     for term in SEARCH_TERMS:
@@ -74,10 +74,10 @@ def save_bronze(jobs):
         """, (
             job["id"],
             job["title"],
-            job["company"]["display_name"],
-            job["location"]["display_name"],
-            job["description"],
-            job["created"],
+            job["company"].get("display_name", "Unknown"),
+            job["location"].get("display_name", "Unknown"),
+            job.get("description", ""),
+            job.get("created", ""),
             "adzuna",
             today
         ))
@@ -98,6 +98,6 @@ def save_bronze(jobs):
 
 if __name__ == "__main__":
     initialize_db()
-    jobs = fetch_jobs(pages=5)
+    jobs = fetch_jobs(pages=10)
     save_bronze(jobs)
     print(f"Done — {len(jobs)} total records fetched")
