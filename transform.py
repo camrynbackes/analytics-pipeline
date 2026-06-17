@@ -1,52 +1,68 @@
-import json
-import csv
 from datetime import date
-from collections import Counter
+from database import get_connection
+from skills import extract_skills
 
+def build_silver(date_pulled=None):
+    if date_pulled is None:
+        date_pulled = date.today().isoformat()
 
-#Silver layer
-import os
-print(os.listdir())
+    conn = get_connection()
+    cursor = conn.cursor()
 
-with open("bronze_jobs_2026-06-10.json", "r") as f:
-    all_jobs = json.load(f)
+    cursor.execute("""
+        SELECT b.id, b.title, b.company, b.description, b.source
+        FROM bronze_jobs b
+        JOIN bronze_job_snapshots s ON b.id = s.job_id
+        WHERE s.date_pulled = ?
+        AND b.id NOT IN (
+            SELECT DISTINCT job_id FROM silver_skills
+        )
+    """, (date_pulled,))
 
-from skills import SKILLS, extract_skills
+    jobs = cursor.fetchall()
+    print(f"Processing {len(jobs)} jobs from bronze")
 
-silver_rows = []
-for job in all_jobs:
-    skills = extract_skills(job["description"])
-    for skill in skills:
-        silver_rows.append({
-            "job_id": job["id"],
-            "title": job["title"],
-            "company": job["company"]["display_name"],
-            "skill": skill,
-            "source": "adzuna",
-            "date_pulled": date.today().isoformat()
-        })
+    silver_rows = []
+    for job_id, title, company, description, source in jobs:
+        skills = extract_skills(description or "")
+        for skill in skills:
+            silver_rows.append((job_id, title, company, skill, source, date_pulled))
 
-filename = f"data/silver_skills_{date.today().isoformat()}.csv"
+    cursor.executemany("""
+        INSERT INTO silver_skills (job_id, title, company, skill, source, date_pulled)
+        VALUES (?, ?, ?, ?, ?, ?)
+    """, silver_rows)
 
-with open(filename, "w", newline="") as f:
-    writer = csv.DictWriter(f, fieldnames=["job_id", "title", "company", "skill", "source", "date_pulled"])
-    writer.writeheader()
-    writer.writerows(silver_rows)
+    conn.commit()
+    conn.close()
+    print(f"Silver: {len(silver_rows)} skill rows saved")
 
-print(f"Silver: {len(silver_rows)} skill rows saved")
+def build_gold(date_pulled=None):
+    if date_pulled is None:
+        date_pulled = date.today().isoformat()
 
+    conn = get_connection()
+    cursor = conn.cursor()
 
-# Gold layer
-with open("data/silver_skills_2026-06-10.csv", "r") as f:
-    reader = csv.DictReader(f)
-    all_skills = [row["skill"] for row in reader]
+    cursor.execute("""
+        SELECT skill, source, COUNT(*) as count
+        FROM silver_skills
+        WHERE date_pulled = ?
+        GROUP BY skill, source
+        ORDER BY count DESC
+    """, (date_pulled,))
 
-skill_counts = Counter(all_skills)
+    rows = cursor.fetchall()
 
-with open("gold_skill_counts.csv", "w", newline="") as f:
-    writer = csv.writer(f)
-    writer.writerow(["skill", "count"])
-    for skill, count in skill_counts.most_common():
-        writer.writerow([skill, count])
+    cursor.executemany("""
+        INSERT INTO gold_skill_counts (skill, source, count, week_start)
+        VALUES (?, ?, ?, ?)
+    """, [(skill, source, count, date_pulled) for skill, source, count in rows])
 
-print(f"Gold: {len(skill_counts)} skills ranked")
+    conn.commit()
+    conn.close()
+    print(f"Gold: {len(rows)} skill counts saved for {date_pulled}")
+
+if __name__ == "__main__":
+    build_silver()
+    build_gold()
