@@ -11,10 +11,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
@@ -23,6 +23,9 @@ jobs:
 
       - name: List files
         run: ls -la
+
+      - name: Test Python
+        run: python -c "print('Python is working')"
 
       - name: Run pipeline
         env:
