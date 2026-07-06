@@ -1,7 +1,8 @@
 import subprocess
 import sys
 
-print("Starting weekly pipeline run...")
+sys.stdout.flush()
+print("Starting weekly pipeline run...", flush=True)
 
 scripts = [
     ("Ingest Adzuna", "ingest_adzuna.py"),
