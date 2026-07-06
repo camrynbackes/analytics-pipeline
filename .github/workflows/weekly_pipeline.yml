@@ -24,12 +24,17 @@ jobs:
       - name: List files
         run: ls -la
 
-      - name: Test Python
-        run: python -c "print('Python is working')"
-
       - name: Run pipeline
         env:
           ADZUNA_APP_ID: ${{ secrets.ADZUNA_APP_ID }}
           ADZUNA_APP_KEY: ${{ secrets.ADZUNA_APP_KEY }}
           SUPABASE_CONNECTION_STRING: ${{ secrets.SUPABASE_CONNECTION_STRING }}
         run: python -u run_pipeline.py
+
+      - name: Commit trend report
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
+          git add data/trend_report_*.csv
+          git commit -m "weekly trend report $(date)" || echo "No changes to commit"
+          git push
