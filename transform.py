@@ -48,6 +48,16 @@ def build_silver_conferences(date_pulled=None):
     conn = get_connection()
     cursor = conn.cursor()
 
+    # debug: check what's in bronze_conference_sessions
+    cursor.execute("SELECT COUNT(*) FROM bronze_conference_sessions WHERE date_pulled = %s", (date_pulled,))
+    count = cursor.fetchone()[0]
+    print(f"Sessions in bronze for {date_pulled}: {count}")
+
+    # debug: check what's in silver_skills for databricks
+    cursor.execute("SELECT COUNT(*) FROM silver_skills WHERE source = 'databricks_summit'")
+    silver_count = cursor.fetchone()[0]
+    print(f"Existing databricks rows in silver: {silver_count}")
+
     cursor.execute("""
         SELECT id, title, source
         FROM bronze_conference_sessions
@@ -60,6 +70,12 @@ def build_silver_conferences(date_pulled=None):
 
     sessions = cursor.fetchall()
     print(f"Processing {len(sessions)} conference sessions")
+    
+    # debug: print first 3 session titles to confirm extraction
+    for session_id, title, source in sessions[:3]:
+        skills = extract_skills(title or "")
+        print(f"  Title: {title[:50]}")
+        print(f"  Skills found: {skills}")
 
     silver_rows = []
     for session_id, title, source in sessions:
