@@ -5,21 +5,14 @@ from datetime import date
 from dotenv import load_dotenv
 from database import get_connection, initialize_db
 
-result = load_dotenv()
-print(f"dotenv loaded: {result}")  
-print(f"current directory: {os.getcwd()}")
-
-from dotenv import dotenv_values
-
-config = dotenv_values()
-print(config)
+load_dotenv()
 
 APP_ID = os.getenv("ADZUNA_APP_ID")
 APP_KEY = os.getenv("ADZUNA_APP_KEY")
 
 SEARCH_TERMS = [
     "data analyst",
-    "business intelligence analyst", 
+    "business intelligence analyst",
     "analytics engineer",
     "marketing analyst",
     "product analyst"
@@ -27,6 +20,7 @@ SEARCH_TERMS = [
 
 def fetch_jobs(pages=10):
     all_jobs = []
+    total_requests = 0
 
     for term in SEARCH_TERMS:
         print(f"\nFetching: {term}")
@@ -40,6 +34,7 @@ def fetch_jobs(pages=10):
             }
 
             response = requests.get(url, params=params)
+            total_requests += 1
 
             if response.status_code != 200:
                 print(f"Error {response.status_code} on page {page}, skipping.")
@@ -54,9 +49,10 @@ def fetch_jobs(pages=10):
             all_jobs.extend(data["results"])
             print(f"Page {page}: {len(data['results'])} jobs fetched")
             time.sleep(1)
-        
+
         time.sleep(2)
 
+    print(f"\nTotal API requests made: {total_requests}")
     return all_jobs
 
 def save_bronze(jobs):
@@ -68,9 +64,10 @@ def save_bronze(jobs):
 
     for job in jobs:
         cursor.execute("""
-            INSERT OR IGNORE INTO bronze_jobs
+            INSERT INTO bronze_jobs
             (id, title, company, location, description, date_posted, source, date_first_seen)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+            VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
+            ON CONFLICT (id) DO NOTHING
         """, (
             job["id"],
             job["title"],
@@ -88,8 +85,9 @@ def save_bronze(jobs):
             repeat_jobs += 1
 
         cursor.execute("""
-            INSERT OR IGNORE INTO bronze_job_snapshots (job_id, date_pulled)
-            VALUES (?, ?)
+            INSERT INTO bronze_job_snapshots (job_id, date_pulled)
+            VALUES (%s, %s)
+            ON CONFLICT (job_id, date_pulled) DO NOTHING
         """, (job["id"], today))
 
     conn.commit()

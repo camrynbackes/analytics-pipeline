@@ -13,9 +13,9 @@ def build_silver(date_pulled=None):
         SELECT b.id, b.title, b.company, b.description, b.source
         FROM bronze_jobs b
         JOIN bronze_job_snapshots s ON b.id = s.job_id
-        WHERE s.date_pulled = ?
-        AND b.id NOT IN (
-            SELECT DISTINCT job_id FROM silver_skills
+        WHERE s.date_pulled = %s
+        AND NOT EXISTS (
+            SELECT 1 FROM silver_skills ss WHERE ss.job_id = b.id
         )
     """, (date_pulled,))
 
@@ -30,7 +30,7 @@ def build_silver(date_pulled=None):
 
     cursor.executemany("""
         INSERT INTO silver_skills (job_id, title, company, skill, source, date_pulled)
-        VALUES (?, ?, ?, ?, ?, ?)
+        VALUES (%s, %s, %s, %s, %s, %s)
     """, silver_rows)
 
     conn.commit()
@@ -47,7 +47,7 @@ def build_gold(date_pulled=None):
     cursor.execute("""
         SELECT skill, source, COUNT(*) as count
         FROM silver_skills
-        WHERE date_pulled = ?
+        WHERE date_pulled = %s
         GROUP BY skill, source
         ORDER BY count DESC
     """, (date_pulled,))
@@ -56,7 +56,7 @@ def build_gold(date_pulled=None):
 
     cursor.executemany("""
         INSERT INTO gold_skill_counts (skill, source, count, week_start)
-        VALUES (?, ?, ?, ?)
+        VALUES (%s, %s, %s, %s)
     """, [(skill, source, count, date_pulled) for skill, source, count in rows])
 
     conn.commit()
