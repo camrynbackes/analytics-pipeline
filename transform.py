@@ -38,9 +38,12 @@ def build_silver(date_pulled=None):
     conn.close()
     print(f"Silver jobs: {len(silver_rows)} skill rows saved")
 
+
 def build_silver_conferences(date_pulled=None):
     if date_pulled is None:
         date_pulled = date.today().isoformat()
+
+    print(f"Looking for conference sessions on: {date_pulled}")
 
     conn = get_connection()
     cursor = conn.cursor()
@@ -49,8 +52,9 @@ def build_silver_conferences(date_pulled=None):
         SELECT id, title, source
         FROM bronze_conference_sessions
         WHERE date_pulled = %s
-        AND NOT EXISTS (
-            SELECT 1 FROM silver_skills ss WHERE ss.job_id = CAST(id AS TEXT)
+        AND CAST(id AS TEXT) NOT IN (
+            SELECT DISTINCT job_id FROM silver_skills
+            WHERE source = 'databricks_summit'
         )
     """, (date_pulled,))
 
@@ -72,6 +76,7 @@ def build_silver_conferences(date_pulled=None):
     conn.commit()
     conn.close()
     print(f"Silver conferences: {len(silver_rows)} skill rows saved")
+
 
 def build_gold(date_pulled=None):
     if date_pulled is None:
@@ -100,6 +105,7 @@ def build_gold(date_pulled=None):
     conn.commit()
     conn.close()
     print(f"Gold: {len(rows)} skill counts saved for {date_pulled}")
+
 
 if __name__ == "__main__":
     build_silver()
