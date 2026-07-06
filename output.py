@@ -1,6 +1,6 @@
 import csv
 import os
-from datetime import date, timedelta
+from datetime import date
 from database import get_connection
 from dotenv import load_dotenv
 
@@ -32,32 +32,34 @@ def generate_trend_report(output_file=None):
     print(f"Current week: {current_week}")
     print(f"Previous week: {prev_week if prev_week else 'no previous data yet'}")
 
-    # get current week counts
+    # get current week counts — combined across sources
     cursor.execute("""
-        SELECT skill, source, count
+        SELECT skill, SUM(count) as total_count
         FROM gold_skill_counts
         WHERE week_start = %s
-        ORDER BY count DESC
+        GROUP BY skill
+        ORDER BY total_count DESC
     """, (current_week,))
     current_rows = cursor.fetchall()
 
-    # get previous week counts into a lookup dict
+    # get previous week counts into a lookup dict — also combined
     prev_counts = {}
     if prev_week:
         cursor.execute("""
-            SELECT skill, source, count
+            SELECT skill, SUM(count) as total_count
             FROM gold_skill_counts
             WHERE week_start = %s
+            GROUP BY skill
         """, (prev_week,))
-        for skill, source, count in cursor.fetchall():
-            prev_counts[(skill, source)] = count
+        for skill, count in cursor.fetchall():
+            prev_counts[skill] = count
 
     conn.close()
 
     # build report rows
     report_rows = []
-    for rank, (skill, source, count) in enumerate(current_rows, start=1):
-        prev_count = prev_counts.get((skill, source))
+    for rank, (skill, count) in enumerate(current_rows, start=1):
+        prev_count = prev_counts.get(skill)
 
         if prev_count is None:
             change = None
@@ -76,7 +78,6 @@ def generate_trend_report(output_file=None):
         report_rows.append({
             "rank": rank,
             "skill": skill,
-            "source": source,
             "count": count,
             "prev_count": prev_count if prev_count else "n/a",
             "change": f"+{change}" if change and change > 0 else str(change) if change is not None else "n/a",
@@ -89,7 +90,7 @@ def generate_trend_report(output_file=None):
     os.makedirs("data", exist_ok=True)
     with open(output_file, "w", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=[
-            "rank", "skill", "source", "count", "prev_count",
+            "rank", "skill", "count", "prev_count",
             "change", "pct_change", "trend", "week_start"
         ])
         writer.writeheader()
