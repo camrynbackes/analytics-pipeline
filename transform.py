@@ -48,12 +48,10 @@ def build_silver_conferences(date_pulled=None):
     conn = get_connection()
     cursor = conn.cursor()
 
-    # debug: check what's in bronze_conference_sessions
     cursor.execute("SELECT COUNT(*) FROM bronze_conference_sessions WHERE date_pulled = %s", (date_pulled,))
     count = cursor.fetchone()[0]
     print(f"Sessions in bronze for {date_pulled}: {count}")
 
-    # debug: check what's in silver_skills for databricks
     cursor.execute("SELECT COUNT(*) FROM silver_skills WHERE source = 'databricks_summit'")
     silver_count = cursor.fetchone()[0]
     print(f"Existing databricks rows in silver: {silver_count}")
@@ -70,8 +68,7 @@ def build_silver_conferences(date_pulled=None):
 
     sessions = cursor.fetchall()
     print(f"Processing {len(sessions)} conference sessions")
-    
-    # debug: print first 3 session titles to confirm extraction
+
     for session_id, title, source in sessions[:3]:
         skills = extract_skills(title or "")
         print(f"  Title: {title[:50]}")
@@ -112,11 +109,13 @@ def build_gold(date_pulled=None):
     rows = cursor.fetchall()
     print(f"Building gold from {len(rows)} skill/source combinations")
 
-    if rows:
-        cursor.executemany("""
+    for skill, source, count in rows:
+        cursor.execute("""
             INSERT INTO gold_skill_counts (skill, source, count, week_start)
             VALUES (%s, %s, %s, %s)
-        """, [(skill, source, count, date_pulled) for skill, source, count in rows])
+            ON CONFLICT (skill, source, week_start)
+            DO UPDATE SET count = EXCLUDED.count
+        """, (skill, source, count, date_pulled))
 
     conn.commit()
     conn.close()
