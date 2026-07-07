@@ -45,7 +45,7 @@ Summit           sessions
 | Ingestion | Python, Requests, BeautifulSoup |
 | Storage | Supabase (hosted Postgres) |
 | Transformation | Python, psycopg2, regex |
-| Orchestration | GitHub Actions (weekly cron) |
+| Orchestration | GitHub Actions (weekly pull) |
 | Output | CSV trend report, Supabase Table Editor |
 
 ---
