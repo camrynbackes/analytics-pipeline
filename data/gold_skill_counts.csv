@@ -1,0 +1,49 @@
+skill,count
+data quality,60
+data pipeline,52
+etl,52
+sql,30
+business intelligence,25
+power bi,15
+tableau,12
+artificial intelligence,11
+python,10
+kpi,9
+excel,8
+data governance,7
+requirements gathering,7
+databricks,7
+snowflake,6
+data modeling,5
+azure,4
+dashboarding,3
+statistics,3
+oracle,3
+sas,3
+machine learning,2
+delta lake,2
+hadoop,2
+aws,2
+looker,2
+master data management,2
+typescript,2
+experimentation,2
+pandas,1
+data lineage,1
+postgresql,1
+mysql,1
+qlik,1
+metadata management,1
+mongodb,1
+pyspark,1
+azure data factory,1
+spark,1
+hive,1
+forecasting,1
+bigquery,1
+gcp,1
+product analytics,1
+data storytelling,1
+jira,1
+dbt,1
+airflow,1
