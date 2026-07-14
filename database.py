@@ -3,8 +3,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-DB_PATH = "data/pipeline.db"
-
 def get_connection():
     import psycopg2
     supabase_url = os.getenv("SUPABASE_CONNECTION_STRING")
