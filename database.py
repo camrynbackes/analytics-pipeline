@@ -1,4 +1,3 @@
-import sqlite3
 import os
 from dotenv import load_dotenv
 
@@ -7,12 +6,9 @@ load_dotenv()
 DB_PATH = "data/pipeline.db"
 
 def get_connection():
+    import psycopg2
     supabase_url = os.getenv("SUPABASE_CONNECTION_STRING")
-    if supabase_url:
-        import psycopg2
-        return psycopg2.connect(supabase_url)
-    else:
-        return sqlite3.connect(DB_PATH)
+    return psycopg2.connect(supabase_url)
 
 def initialize_db():
     conn = get_connection()
