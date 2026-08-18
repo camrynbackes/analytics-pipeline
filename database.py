@@ -62,7 +62,8 @@ def initialize_db():
             skill TEXT,
             count INTEGER,
             source TEXT,
-            week_start DATE
+            week_start DATE,
+            UNIQUE (skill, source, week_start)
         )
     """)
 

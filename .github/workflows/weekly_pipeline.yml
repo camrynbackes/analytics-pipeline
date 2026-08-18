@@ -21,8 +21,10 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: List files
-        run: ls -la
+      - name: Run database migration
+        env:
+          SUPABASE_CONNECTION_STRING: ${{ secrets.SUPABASE_CONNECTION_STRING }}
+        run: python migrate_gold_constraint.py
 
       - name: Run pipeline
         env:
