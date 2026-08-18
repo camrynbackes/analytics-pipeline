@@ -1,67 +1,87 @@
 rank,skill,count,prev_count,change,pct_change,trend,week_start
-1,business intelligence,429,113,+316,279.6%,up,2026-08-18
-2,artificial intelligence,217,265,-48,-18.1%,down,2026-08-18
-3,oracle,128,2,+126,6300.0%,up,2026-08-18
-4,data pipeline,114,5,+109,2180.0%,up,2026-08-18
-5,sql,114,31,+83,267.7%,up,2026-08-18
-6,experimentation,88,3,+85,2833.3%,up,2026-08-18
-7,marketing analytics,84,n/a,n/a,n/a,new,2026-08-18
-8,power bi,80,13,+67,515.4%,up,2026-08-18
-9,data quality,58,13,+45,346.2%,up,2026-08-18
-10,tableau,40,8,+32,400.0%,up,2026-08-18
-11,kpi,38,3,+35,1166.7%,up,2026-08-18
-12,data governance,38,4,+34,850.0%,up,2026-08-18
-13,python,32,7,+25,357.1%,up,2026-08-18
-14,clustering,32,n/a,n/a,n/a,new,2026-08-18
-15,data modeling,28,6,+22,366.7%,up,2026-08-18
-16,requirements gathering,28,20,+8,40.0%,up,2026-08-18
-17,snowflake,28,7,+21,300.0%,up,2026-08-18
-18,statistics,24,2,+22,1100.0%,up,2026-08-18
-19,machine learning,24,2,+22,1100.0%,up,2026-08-18
-20,excel,22,5,+17,340.0%,up,2026-08-18
-21,aws,20,2,+18,900.0%,up,2026-08-18
-22,etl,20,5,+15,300.0%,up,2026-08-18
-23,databricks,18,7,+11,157.1%,up,2026-08-18
-24,classification,18,n/a,n/a,n/a,new,2026-08-18
-25,typescript,16,1,+15,1500.0%,up,2026-08-18
-26,forecasting,12,4,+8,200.0%,up,2026-08-18
-27,generative ai,12,1,+11,1100.0%,up,2026-08-18
-28,product analytics,10,n/a,n/a,n/a,new,2026-08-18
-29,dbt,10,1,+9,900.0%,up,2026-08-18
-30,predictive modeling,8,n/a,n/a,n/a,new,2026-08-18
-31,attribution,8,1,+7,700.0%,up,2026-08-18
-32,azure,8,1,+7,700.0%,up,2026-08-18
-33,master data management,8,2,+6,300.0%,up,2026-08-18
-34,elt,6,3,+3,100.0%,up,2026-08-18
-35,data lineage,6,n/a,n/a,n/a,new,2026-08-18
-36,spark,6,3,+3,100.0%,up,2026-08-18
-37,gcp,6,1,+5,500.0%,up,2026-08-18
-38,data storytelling,6,1,+5,500.0%,up,2026-08-18
-39,qlik,6,n/a,n/a,n/a,new,2026-08-18
-40,gdpr,4,n/a,n/a,n/a,new,2026-08-18
-41,web analytics,4,n/a,n/a,n/a,new,2026-08-18
-42,microsoft fabric,4,1,+3,300.0%,up,2026-08-18
-43,ccpa,4,n/a,n/a,n/a,new,2026-08-18
-44,pyspark,4,1,+3,300.0%,up,2026-08-18
-45,dashboarding,4,4,0,0.0%,flat,2026-08-18
-46,hadoop,4,1,+3,300.0%,up,2026-08-18
-47,sas,4,n/a,n/a,n/a,new,2026-08-18
-48,dax,4,n/a,n/a,n/a,new,2026-08-18
-49,gitlab,4,n/a,n/a,n/a,new,2026-08-18
-50,redshift,4,1,+3,300.0%,up,2026-08-18
-51,fivetran,2,n/a,n/a,n/a,new,2026-08-18
-52,incrementality,2,n/a,n/a,n/a,new,2026-08-18
-53,java,2,1,+1,100.0%,up,2026-08-18
-54,causal inference,2,n/a,n/a,n/a,new,2026-08-18
-55,mongodb,2,n/a,n/a,n/a,new,2026-08-18
-56,aws glue,2,n/a,n/a,n/a,new,2026-08-18
-57,stakeholder management,2,4,-2,-50.0%,down,2026-08-18
-58,gemini,2,n/a,n/a,n/a,new,2026-08-18
-59,looker,2,1,+1,100.0%,up,2026-08-18
-60,ai agents,2,n/a,n/a,n/a,new,2026-08-18
-61,git,2,1,+1,100.0%,up,2026-08-18
-62,bigquery,2,n/a,n/a,n/a,new,2026-08-18
-63,a/b testing,2,1,+1,100.0%,up,2026-08-18
-64,pandas,2,1,+1,100.0%,up,2026-08-18
-65,feature engineering,1,1,0,0.0%,flat,2026-08-18
-66,iceberg,1,1,0,0.0%,flat,2026-08-18
+1,artificial intelligence,481,265,+216,81.5%,up,2026-08-18
+2,business intelligence,459,113,+346,306.2%,up,2026-08-18
+3,databricks,275,7,+268,3828.6%,up,2026-08-18
+4,sql,132,31,+101,325.8%,up,2026-08-18
+5,oracle,131,2,+129,6450.0%,up,2026-08-18
+6,data pipeline,120,5,+115,2300.0%,up,2026-08-18
+7,experimentation,92,3,+89,2966.7%,up,2026-08-18
+8,marketing analytics,85,n/a,n/a,n/a,new,2026-08-18
+9,power bi,81,13,+68,523.1%,up,2026-08-18
+10,data quality,61,13,+48,369.2%,up,2026-08-18
+11,ai agents,46,n/a,n/a,n/a,new,2026-08-18
+12,data governance,44,4,+40,1000.0%,up,2026-08-18
+13,tableau,41,8,+33,412.5%,up,2026-08-18
+14,kpi,39,3,+36,1200.0%,up,2026-08-18
+15,python,33,7,+26,371.4%,up,2026-08-18
+16,clustering,33,n/a,n/a,n/a,new,2026-08-18
+17,machine learning,31,2,+29,1450.0%,up,2026-08-18
+18,snowflake,31,7,+24,342.9%,up,2026-08-18
+19,data modeling,30,6,+24,400.0%,up,2026-08-18
+20,spark,29,3,+26,866.7%,up,2026-08-18
+21,etl,29,5,+24,480.0%,up,2026-08-18
+22,requirements gathering,28,20,+8,40.0%,up,2026-08-18
+23,statistics,24,2,+22,1100.0%,up,2026-08-18
+24,aws,24,2,+22,1100.0%,up,2026-08-18
+25,excel,23,5,+18,360.0%,up,2026-08-18
+26,classification,18,n/a,n/a,n/a,new,2026-08-18
+27,generative ai,17,1,+16,1600.0%,up,2026-08-18
+28,typescript,16,1,+15,1500.0%,up,2026-08-18
+29,dbt,14,1,+13,1300.0%,up,2026-08-18
+30,forecasting,13,4,+9,225.0%,up,2026-08-18
+31,product analytics,12,n/a,n/a,n/a,new,2026-08-18
+32,iceberg,11,1,+10,1000.0%,up,2026-08-18
+33,azure,10,1,+9,900.0%,up,2026-08-18
+34,master data management,10,2,+8,400.0%,up,2026-08-18
+35,gcp,8,1,+7,700.0%,up,2026-08-18
+36,predictive modeling,8,n/a,n/a,n/a,new,2026-08-18
+37,attribution,8,1,+7,700.0%,up,2026-08-18
+38,qlik,7,n/a,n/a,n/a,new,2026-08-18
+39,data storytelling,6,1,+5,500.0%,up,2026-08-18
+40,elt,6,3,+3,100.0%,up,2026-08-18
+41,data lineage,6,n/a,n/a,n/a,new,2026-08-18
+42,microsoft fabric,6,1,+5,500.0%,up,2026-08-18
+43,fivetran,5,n/a,n/a,n/a,new,2026-08-18
+44,dax,5,n/a,n/a,n/a,new,2026-08-18
+45,pyspark,5,1,+4,400.0%,up,2026-08-18
+46,llm,5,2,+3,150.0%,up,2026-08-18
+47,hadoop,4,1,+3,300.0%,up,2026-08-18
+48,gitlab,4,n/a,n/a,n/a,new,2026-08-18
+49,sigma,4,n/a,n/a,n/a,new,2026-08-18
+50,feature engineering,4,1,+3,300.0%,up,2026-08-18
+51,redshift,4,1,+3,300.0%,up,2026-08-18
+52,gdpr,4,n/a,n/a,n/a,new,2026-08-18
+53,postgresql,4,n/a,n/a,n/a,new,2026-08-18
+54,ccpa,4,n/a,n/a,n/a,new,2026-08-18
+55,dashboarding,4,4,0,0.0%,flat,2026-08-18
+56,claude,4,n/a,n/a,n/a,new,2026-08-18
+57,sas,4,n/a,n/a,n/a,new,2026-08-18
+58,web analytics,4,n/a,n/a,n/a,new,2026-08-18
+59,gemini,3,n/a,n/a,n/a,new,2026-08-18
+60,copilot,3,n/a,n/a,n/a,new,2026-08-18
+61,rag,3,n/a,n/a,n/a,new,2026-08-18
+62,bigquery,3,n/a,n/a,n/a,new,2026-08-18
+63,domo,3,n/a,n/a,n/a,new,2026-08-18
+64,aws glue,3,n/a,n/a,n/a,new,2026-08-18
+65,pandas,2,1,+1,100.0%,up,2026-08-18
+66,mongodb,2,n/a,n/a,n/a,new,2026-08-18
+67,mlops,2,n/a,n/a,n/a,new,2026-08-18
+68,stakeholder management,2,4,-2,-50.0%,down,2026-08-18
+69,causal inference,2,n/a,n/a,n/a,new,2026-08-18
+70,a/b testing,2,1,+1,100.0%,up,2026-08-18
+71,thoughtspot,2,n/a,n/a,n/a,new,2026-08-18
+72,looker,2,1,+1,100.0%,up,2026-08-18
+73,incrementality,2,n/a,n/a,n/a,new,2026-08-18
+74,git,2,1,+1,100.0%,up,2026-08-18
+75,java,2,1,+1,100.0%,up,2026-08-18
+76,fine tuning,1,n/a,n/a,n/a,new,2026-08-18
+77,airflow,1,n/a,n/a,n/a,new,2026-08-18
+78,kafka,1,n/a,n/a,n/a,new,2026-08-18
+79,vector search,1,n/a,n/a,n/a,new,2026-08-18
+80,kubernetes,1,n/a,n/a,n/a,new,2026-08-18
+81,hex,1,n/a,n/a,n/a,new,2026-08-18
+82,azure synapse,1,n/a,n/a,n/a,new,2026-08-18
+83,flink,1,n/a,n/a,n/a,new,2026-08-18
+84,delta lake,1,n/a,n/a,n/a,new,2026-08-18
+85,gpt,1,n/a,n/a,n/a,new,2026-08-18
+86,scala,1,n/a,n/a,n/a,new,2026-08-18
