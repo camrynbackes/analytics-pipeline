@@ -1,0 +1,87 @@
+rank,skill,count,four_week_avg,change_vs_avg,pct_change,trend,week_start
+1,artificial intelligence,383,246.5,+136.5,55.4%,up,2026-08-24
+2,databricks,262,73.8,+188.2,255.0%,up,2026-08-24
+3,business intelligence,142,257.0,-115.0,-44.7%,down,2026-08-24
+4,sql,75,63.0,+12.0,19.0%,up,2026-08-24
+5,ai agents,45,26.5,+18.5,69.8%,up,2026-08-24
+6,data quality,31,32.2,-1.2,-3.7%,stable,2026-08-24
+7,power bi,30,45.0,-15.0,-33.3%,down,2026-08-24
+8,tableau,23,22.0,+1.0,4.5%,stable,2026-08-24
+9,spark,23,13.0,+10.0,76.9%,up,2026-08-24
+10,excel,21,14.2,+6.8,47.9%,up,2026-08-24
+11,machine learning,20,16.8,+3.2,19.0%,stable,2026-08-24
+12,python,20,15.0,+5.0,33.3%,stable,2026-08-24
+13,etl,18,15.0,+3.0,20.0%,stable,2026-08-24
+14,snowflake,17,15.0,+2.0,13.3%,stable,2026-08-24
+15,data pipeline,17,42.2,-25.2,-59.7%,down,2026-08-24
+16,marketing analytics,14,50.0,-36.0,-72.0%,down,2026-08-24
+17,kpi,14,16.2,-2.2,-13.6%,stable,2026-08-24
+18,requirements gathering,12,32.0,-20.0,-62.5%,down,2026-08-24
+19,data governance,11,69.2,-58.2,-84.1%,down,2026-08-24
+20,aws,10,9.0,+1.0,11.1%,stable,2026-08-24
+21,data modeling,10,15.8,-5.8,-36.7%,down,2026-08-24
+22,iceberg,10,4.3,+5.7,132.6%,up,2026-08-24
+23,gcp,9,9.3,-0.3,-3.2%,stable,2026-08-24
+24,statistics,8,9.2,-1.2,-13.0%,stable,2026-08-24
+25,dashboarding,8,4.0,+4.0,100.0%,stable,2026-08-24
+26,typescript,8,12.2,-4.2,-34.4%,stable,2026-08-24
+27,oracle,8,47.0,-39.0,-83.0%,down,2026-08-24
+28,docker,7,2.0,+5.0,250.0%,stable,2026-08-24
+29,generative ai,6,5.8,+0.2,3.4%,stable,2026-08-24
+30,dbt,6,8.2,-2.2,-26.8%,stable,2026-08-24
+31,microsoft fabric,6,4.8,+1.2,25.0%,stable,2026-08-24
+32,llm,6,3.0,+3.0,100.0%,stable,2026-08-24
+33,sigma,5,4.0,+1.0,25.0%,stable,2026-08-24
+34,experimentation,5,26.0,-21.0,-80.8%,down,2026-08-24
+35,feature engineering,5,2.0,+3.0,150.0%,stable,2026-08-24
+36,web analytics,4,2.3,+1.7,73.9%,stable,2026-08-24
+37,azure,4,7.7,-3.7,-48.1%,stable,2026-08-24
+38,claude,4,2.5,+1.5,60.0%,stable,2026-08-24
+39,data storytelling,4,3.5,+0.5,14.3%,stable,2026-08-24
+40,fivetran,4,3.0,+1.0,33.3%,stable,2026-08-24
+41,forecasting,4,8.8,-4.8,-54.5%,stable,2026-08-24
+42,postgresql,4,2.0,+2.0,100.0%,stable,2026-08-24
+43,domo,3,2.0,+1.0,50.0%,stable,2026-08-24
+44,looker,3,1.5,+1.5,100.0%,stable,2026-08-24
+45,elt,3,3.2,-0.2,-6.2%,stable,2026-08-24
+46,stakeholder management,3,3.0,0.0,0.0%,stable,2026-08-24
+47,product analytics,3,7.3,-4.3,-58.9%,stable,2026-08-24
+48,rag,3,3.0,0.0,0.0%,stable,2026-08-24
+49,copilot,3,3.0,0.0,0.0%,stable,2026-08-24
+50,thoughtspot,2,2.0,0.0,0.0%,stable,2026-08-24
+51,mongodb,2,1.5,+0.5,33.3%,stable,2026-08-24
+52,java,2,2.2,-0.2,-9.1%,stable,2026-08-24
+53,gitlab,2,4.0,-2.0,-50.0%,stable,2026-08-24
+54,mlops,2,2.0,0.0,0.0%,stable,2026-08-24
+55,master data management,2,4.5,-2.5,-55.6%,stable,2026-08-24
+56,bigquery,2,2.5,-0.5,-20.0%,stable,2026-08-24
+57,dax,2,4.5,-2.5,-55.6%,stable,2026-08-24
+58,pyspark,1,2.3,-1.3,-56.5%,stable,2026-08-24
+59,qlik,1,4.5,-3.5,-77.8%,stable,2026-08-24
+60,redshift,1,2.3,-1.3,-56.5%,stable,2026-08-24
+61,sas,1,4.3,-3.3,-76.7%,stable,2026-08-24
+62,scala,1,1.0,0.0,0.0%,stable,2026-08-24
+63,clustering,1,33.0,-32.0,-97.0%,down,2026-08-24
+64,chatgpt,1,n/a,n/a,n/a,new,2026-08-24
+65,azure synapse,1,1.0,0.0,0.0%,stable,2026-08-24
+66,aws glue,1,3.0,-2.0,-66.7%,stable,2026-08-24
+67,superset,1,n/a,n/a,n/a,new,2026-08-24
+68,aws athena,1,n/a,n/a,n/a,new,2026-08-24
+69,attribution,1,4.3,-3.3,-76.7%,stable,2026-08-24
+70,vector search,1,1.0,0.0,0.0%,stable,2026-08-24
+71,gpt,1,1.0,0.0,0.0%,stable,2026-08-24
+72,hex,1,1.0,0.0,0.0%,stable,2026-08-24
+73,incrementality,1,2.0,-1.0,-50.0%,stable,2026-08-24
+74,javascript,1,1.0,0.0,0.0%,stable,2026-08-24
+75,jira,1,4.5,-3.5,-77.8%,stable,2026-08-24
+76,kafka,1,1.0,0.0,0.0%,stable,2026-08-24
+77,kubernetes,1,1.0,0.0,0.0%,stable,2026-08-24
+78,gemini,1,2.0,-1.0,-50.0%,stable,2026-08-24
+79,flink,1,1.0,0.0,0.0%,stable,2026-08-24
+80,fine tuning,1,1.0,0.0,0.0%,stable,2026-08-24
+81,marketing mix modeling,1,n/a,n/a,n/a,new,2026-08-24
+82,pandas,1,1.5,-0.5,-33.3%,stable,2026-08-24
+83,airflow,1,1.3,-0.3,-23.1%,stable,2026-08-24
+84,delta lake,1,1.0,0.0,0.0%,stable,2026-08-24
+85,power query,1,1.0,0.0,0.0%,stable,2026-08-24
+86,predictive modeling,1,8.0,-7.0,-87.5%,down,2026-08-24
