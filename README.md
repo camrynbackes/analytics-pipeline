@@ -42,7 +42,7 @@ Summit           sessions
 
 | Layer | Technology |
 |---|---|
-| Ingestion | Python, Requests, BeautifulSoup |
+| Ingestion | Python, Requests (JSON/regex extraction) |
 | Storage | Supabase (hosted Postgres) |
 | Transformation | Python, psycopg2, regex |
 | Orchestration | GitHub Actions (weekly pull) |
@@ -60,7 +60,7 @@ Summit           sessions
 - **Deduplication**: Jobs are stored once in `bronze_jobs` using `INSERT ... ON CONFLICT DO NOTHING`. A separate `bronze_job_snapshots` table tracks weekly activity without re-storing descriptions — separating content from activity
 
 ### Databricks Data + AI Summit
-- **Access**: Public agenda, scraped via BeautifulSoup
+- **Access**: Public agenda page; session data is extracted from the embedded `__NEXT_DATA__` JSON blob (Next.js page props) via regex, rather than parsing rendered HTML
 - **Volume**: 18 sessions (first page) — full pagination requires Playwright (v2 roadmap)
 - **Note**: Session titles are shorter than job descriptions and surface different signal — architecture patterns and emerging tools rather than explicit skill requirements
 
@@ -112,16 +112,16 @@ gold_skill_counts (id SERIAL PK, skill, source, count, week_start, UNIQUE (skill
 
 ## Weekly Output
 
-Each run generates a CSV trend report saved to `data/` and committed to this repo:
+Each run generates a CSV trend report saved to `data/` and committed to this repo. Rather than comparing only to the immediately prior week, each skill's current count is compared against its **4-week rolling average** (the up-to-4 weeks preceding the current one), which smooths out noisy single-week swings:
 
 ```
-rank | skill  | count | prev_count | change | pct_change | trend | week_start
-1    | sql    | 450   | 420        | +30    | +7.1%      | up    | 2026-07-07
-2    | python | 380   | 410        | -30    | -7.3%      | down  | 2026-07-07
-3    | dbt    | 120   | n/a        | n/a    | n/a        | new   | 2026-07-07
+rank | skill  | count | four_week_avg | change_vs_avg | pct_change | trend  | week_start
+1    | sql    | 450   | 420.5         | +29.5         | +7.0%      | up     | 2026-07-07
+2    | python | 380   | 384.0         | -4.0          | -1.0%      | stable | 2026-07-07
+3    | dbt    | 120   | n/a           | n/a           | n/a        | new    | 2026-07-07
 ```
 
-`trend` values: `up`, `down`, `flat`, `new` (first appearance).
+`trend` values: `up` (more than 5 mentions above the rolling average), `down` (more than 5 below), `stable` (within ±5), `new` (first appearance, no prior weeks to average).
 
 ---
 
@@ -211,3 +211,7 @@ A few deliberate choices worth noting:
 **Predefined taxonomy over NLP** — keyword matching was chosen over KeyBERT or spaCy because the goal is measuring known tools, not discovering unknown topics. The tradeoff is manual taxonomy maintenance; the benefit is fully interpretable, auditable results.
 
 **Rate limit budgeting** — the pipeline is explicitly designed around Adzuna's 2,500 requests/month free tier, using ~400/month (100/run × 4 runs) and leaving 2,100 as buffer. This is documented as an operational constraint, not an afterthought.
+
+**4-week rolling average over single-week comparison** — trend direction is calculated against the average of up to the 4 preceding weeks rather than just the prior week. This smooths out one-off spikes or dips in a given week's data and gives a more stable signal for what's genuinely trending up or down.
+
+**JSON extraction over HTML parsing for Databricks** — the scraper reads the page's embedded `__NEXT_DATA__` script tag (the same JSON the frontend renders from) instead of parsing rendered HTML with BeautifulSoup. This is more resilient to CSS/markup changes, at the cost of being coupled to the site's underlying Next.js data structure.
