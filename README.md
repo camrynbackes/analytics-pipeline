@@ -61,7 +61,7 @@ Summit           sessions
 
 ### Databricks Data + AI Summit
 - **Access**: Public agenda page; session data is extracted from the embedded `__NEXT_DATA__` JSON blob (Next.js page props) via regex, rather than parsing rendered HTML
-- **Volume**: 18 sessions (first page) — full pagination requires Playwright (v2 roadmap)
+- **Volume**: ~805 sessions — the full agenda, since session data is read directly from the embedded JSON rather than rendered/paginated HTML
 - **Note**: Session titles are shorter than job descriptions and surface different signal — architecture patterns and emerging tools rather than explicit skill requirements
 
 ---
@@ -182,7 +182,6 @@ analytics-pipeline/
 
 ## Known Limitations
 
-- **Databricks scraper**: Captures first page only (18 sessions) due to JavaScript-rendered pagination. Full scraping via Playwright is planned for v2.
 - **Adzuna free tier**: 2,500 requests/month limits weekly volume. A paid tier or additional job board APIs would improve sample size.
 - **Sampling bias**: Remote-friendly job boards and practitioner conferences over-represent modern stack tools (dbt, Snowflake, Airflow) relative to the broader market. Mid-market tooling is likely under-counted.
 - **Keyword matching**: Predefined taxonomy requires manual updates to capture newly emerging tools. Does not handle contextual negation ("no experience with Tableau required").
@@ -191,7 +190,6 @@ analytics-pipeline/
 
 ## Roadmap
 
-- [ ] Add Playwright-based full pagination for Databricks (805 sessions)
 - [ ] Add Reddit API source (`r/dataengineering`, `r/dataanalytics`)
 - [ ] Add second job board source to increase volume and reduce Adzuna dependency
 - [ ] Build dashboard for interactive trend visualization
