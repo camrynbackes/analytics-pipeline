@@ -183,7 +183,7 @@ analytics-pipeline/
 ## Known Limitations
 
 - **Adzuna free tier**: 2,500 requests/month limits weekly volume. A paid tier or additional job board APIs would improve sample size.
-- **Sampling bias**: Remote-friendly job boards and practitioner conferences over-represent modern stack tools (dbt, Snowflake, Airflow) relative to the broader market. Mid-market tooling is likely under-counted.
+- **Sampling bias**: Job board aggregators and practitioner conferences over-represent companies with active digital hiring pipelines — larger tech companies and startups tend to post more frequently than mid-market or regional firms. Mid-market tooling (Excel, SSRS, on-prem SQL Server) is likely under-counted relative to its actual market share.
 - **Keyword matching**: Predefined taxonomy requires manual updates to capture newly emerging tools. Does not handle contextual negation ("no experience with Tableau required").
 
 ---
