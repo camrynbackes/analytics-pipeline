@@ -1,0 +1,80 @@
+rank,skill,count,four_week_avg,change_vs_avg,pct_change,trend,week_start
+1,artificial intelligence,292,371.5,-79.5,-21.4%,down,2026-09-07
+2,databricks,261,200.8,+60.2,30.0%,up,2026-09-07
+3,business intelligence,126,215.5,-89.5,-41.5%,down,2026-09-07
+4,data pipeline,66,42.8,+23.2,54.2%,up,2026-09-07
+5,ai agents,46,46.3,-0.3,-0.6%,stable,2026-09-07
+6,sql,42,83.2,-41.2,-49.5%,down,2026-09-07
+7,gcp,27,5.8,+21.2,365.5%,up,2026-09-07
+8,power bi,26,40.2,-14.2,-35.3%,down,2026-09-07
+9,spark,23,20.0,+3.0,15.0%,stable,2026-09-07
+10,data quality,20,38.8,-18.8,-48.5%,down,2026-09-07
+11,data modeling,15,16.0,-1.0,-6.2%,stable,2026-09-07
+12,kpi,14,16.8,-2.8,-16.7%,stable,2026-09-07
+13,etl,13,18.0,-5.0,-27.8%,stable,2026-09-07
+14,aws,13,12.8,+0.2,1.6%,stable,2026-09-07
+15,tableau,11,22.0,-11.0,-50.0%,down,2026-09-07
+16,python,11,19.0,-8.0,-42.1%,down,2026-09-07
+17,data governance,10,19.2,-9.2,-47.9%,down,2026-09-07
+18,dbt,10,8.0,+2.0,25.0%,stable,2026-09-07
+19,iceberg,10,8.0,+2.0,25.0%,stable,2026-09-07
+20,machine learning,10,17.8,-7.8,-43.8%,down,2026-09-07
+21,oracle,10,39.0,-29.0,-74.4%,down,2026-09-07
+22,forecasting,8,7.0,+1.0,14.3%,stable,2026-09-07
+23,excel,7,17.8,-10.8,-60.7%,down,2026-09-07
+24,snowflake,6,18.2,-12.2,-67.0%,down,2026-09-07
+25,generative ai,5,8.0,-3.0,-37.5%,stable,2026-09-07
+26,llm,5,4.8,+0.2,4.2%,stable,2026-09-07
+27,requirements gathering,5,17.5,-12.5,-71.4%,down,2026-09-07
+28,sigma,5,4.3,+0.7,16.3%,stable,2026-09-07
+29,typescript,5,10.8,-5.8,-53.7%,down,2026-09-07
+30,dax,4,4.0,0.0,0.0%,stable,2026-09-07
+31,postgresql,4,5.0,-1.0,-20.0%,stable,2026-09-07
+32,microsoft fabric,4,5.2,-1.2,-23.1%,stable,2026-09-07
+33,master data management,4,4.2,-0.2,-4.8%,stable,2026-09-07
+34,claude,4,4.0,0.0,0.0%,stable,2026-09-07
+35,experimentation,4,27.0,-23.0,-85.2%,down,2026-09-07
+36,looker,4,2.0,+2.0,100.0%,stable,2026-09-07
+37,rag,3,3.0,0.0,0.0%,stable,2026-09-07
+38,copilot,3,3.3,-0.3,-9.1%,stable,2026-09-07
+39,product analytics,3,7.7,-4.7,-61.0%,stable,2026-09-07
+40,power query,3,2.0,+1.0,50.0%,stable,2026-09-07
+41,marketing analytics,3,35.3,-32.3,-91.5%,down,2026-09-07
+42,causal inference,3,2.0,+1.0,50.0%,stable,2026-09-07
+43,domo,3,3.0,0.0,0.0%,stable,2026-09-07
+44,feature engineering,3,3.5,-0.5,-14.3%,stable,2026-09-07
+45,fivetran,3,4.3,-1.3,-30.2%,stable,2026-09-07
+46,statistics,3,10.5,-7.5,-71.4%,down,2026-09-07
+47,dashboarding,3,4.5,-1.5,-33.3%,stable,2026-09-07
+48,sas,3,2.5,+0.5,20.0%,stable,2026-09-07
+49,roas,2,n/a,n/a,n/a,new,2026-09-07
+50,mlops,2,2.0,0.0,0.0%,stable,2026-09-07
+51,qlik,2,3.0,-1.0,-33.3%,stable,2026-09-07
+52,thoughtspot,2,2.0,0.0,0.0%,stable,2026-09-07
+53,azure,2,5.2,-3.2,-61.5%,stable,2026-09-07
+54,fine tuning,1,1.0,0.0,0.0%,stable,2026-09-07
+55,cac,1,n/a,n/a,n/a,new,2026-09-07
+56,pandas,1,1.3,-0.3,-23.1%,stable,2026-09-07
+57,hex,1,1.3,-0.3,-23.1%,stable,2026-09-07
+58,bigquery,1,2.7,-1.7,-63.0%,stable,2026-09-07
+59,gpt,1,1.0,0.0,0.0%,stable,2026-09-07
+60,predictive modeling,1,4.5,-3.5,-77.8%,stable,2026-09-07
+61,gitlab,1,2.7,-1.7,-63.0%,stable,2026-09-07
+62,pyspark,1,2.2,-1.2,-54.5%,stable,2026-09-07
+63,azure synapse,1,1.3,-0.3,-23.1%,stable,2026-09-07
+64,delta lake,1,1.0,0.0,0.0%,stable,2026-09-07
+65,gemini,1,1.7,-0.7,-41.2%,stable,2026-09-07
+66,data lineage,1,6.0,-5.0,-83.3%,stable,2026-09-07
+67,data storytelling,1,3.0,-2.0,-66.7%,stable,2026-09-07
+68,customer analytics,1,n/a,n/a,n/a,new,2026-09-07
+69,scala,1,1.0,0.0,0.0%,stable,2026-09-07
+70,scikit-learn,1,n/a,n/a,n/a,new,2026-09-07
+71,vector search,1,1.0,0.0,0.0%,stable,2026-09-07
+72,azure data factory,1,1.0,0.0,0.0%,stable,2026-09-07
+73,elt,1,5.2,-4.2,-80.8%,stable,2026-09-07
+74,aws glue,1,1.7,-0.7,-41.2%,stable,2026-09-07
+75,flink,1,1.0,0.0,0.0%,stable,2026-09-07
+76,airflow,1,1.7,-0.7,-41.2%,stable,2026-09-07
+77,kubernetes,1,1.0,0.0,0.0%,stable,2026-09-07
+78,kafka,1,1.0,0.0,0.0%,stable,2026-09-07
+79,clustering,1,11.7,-10.7,-91.5%,down,2026-09-07
