@@ -1,0 +1,72 @@
+rank,skill,count,four_week_avg,change_vs_avg,pct_change,trend,week_start
+1,artificial intelligence,277,378.2,-101.2,-26.8%,down,2026-09-14
+2,databricks,259,264.2,-5.2,-2.0%,down,2026-09-14
+3,business intelligence,95,218.8,-123.8,-56.6%,down,2026-09-14
+4,sql,84,86.0,-2.0,-2.3%,stable,2026-09-14
+5,ai agents,44,46.2,-2.2,-4.8%,stable,2026-09-14
+6,oracle,43,41.0,+2.0,4.9%,stable,2026-09-14
+7,spark,23,25.0,-2.0,-8.0%,stable,2026-09-14
+8,etl,14,20.0,-6.0,-30.0%,down,2026-09-14
+9,power bi,13,43.5,-30.5,-70.1%,down,2026-09-14
+10,snowflake,12,18.0,-6.0,-33.3%,down,2026-09-14
+11,tableau,11,22.8,-11.8,-51.8%,down,2026-09-14
+12,iceberg,10,10.2,-0.2,-2.0%,stable,2026-09-14
+13,data governance,9,20.8,-11.8,-56.7%,down,2026-09-14
+14,data pipeline,9,58.0,-49.0,-84.5%,down,2026-09-14
+15,data quality,9,40.5,-31.5,-77.8%,down,2026-09-14
+16,machine learning,7,19.8,-12.8,-64.6%,down,2026-09-14
+17,python,7,20.0,-13.0,-65.0%,down,2026-09-14
+18,generative ai,6,9.0,-3.0,-33.3%,stable,2026-09-14
+19,dbt,6,10.2,-4.2,-41.2%,stable,2026-09-14
+20,kpi,6,19.5,-13.5,-69.2%,down,2026-09-14
+21,llm,5,5.5,-0.5,-9.1%,stable,2026-09-14
+22,postgresql,5,4.8,+0.2,4.2%,stable,2026-09-14
+23,dashboarding,4,4.2,-0.2,-4.8%,stable,2026-09-14
+24,sigma,4,4.5,-0.5,-11.1%,stable,2026-09-14
+25,statistics,4,10.8,-6.8,-63.0%,down,2026-09-14
+26,excel,4,18.2,-14.2,-78.0%,down,2026-09-14
+27,claude,4,4.0,0.0,0.0%,stable,2026-09-14
+28,aws,4,15.5,-11.5,-74.2%,down,2026-09-14
+29,fivetran,3,4.0,-1.0,-25.0%,stable,2026-09-14
+30,typescript,3,11.8,-8.8,-74.6%,down,2026-09-14
+31,copilot,3,3.2,-0.2,-6.2%,stable,2026-09-14
+32,requirements gathering,3,13.8,-10.8,-78.3%,down,2026-09-14
+33,data modeling,3,18.2,-15.2,-83.5%,down,2026-09-14
+34,rag,3,3.0,0.0,0.0%,stable,2026-09-14
+35,domo,3,3.0,0.0,0.0%,stable,2026-09-14
+36,feature engineering,3,4.0,-1.0,-25.0%,stable,2026-09-14
+37,experimentation,3,27.2,-24.2,-89.0%,down,2026-09-14
+38,forecasting,3,8.0,-5.0,-62.5%,stable,2026-09-14
+39,master data management,3,4.8,-1.8,-37.5%,stable,2026-09-14
+40,azure,2,5.5,-3.5,-63.6%,stable,2026-09-14
+41,thoughtspot,2,2.0,0.0,0.0%,stable,2026-09-14
+42,gcp,2,12.2,-10.2,-83.6%,down,2026-09-14
+43,sas,2,2.7,-0.7,-25.9%,stable,2026-09-14
+44,dax,2,4.0,-2.0,-50.0%,stable,2026-09-14
+45,microsoft fabric,2,6.0,-4.0,-66.7%,stable,2026-09-14
+46,qlik,2,2.8,-0.8,-28.6%,stable,2026-09-14
+47,mlops,2,2.0,0.0,0.0%,stable,2026-09-14
+48,vector search,1,1.0,0.0,0.0%,stable,2026-09-14
+49,airflow,1,1.5,-0.5,-33.3%,stable,2026-09-14
+50,aws glue,1,1.5,-0.5,-33.3%,stable,2026-09-14
+51,azure synapse,1,1.2,-0.2,-16.7%,stable,2026-09-14
+52,bigquery,1,2.2,-1.2,-54.5%,stable,2026-09-14
+53,classification,1,11.0,-10.0,-90.9%,down,2026-09-14
+54,clustering,1,9.0,-8.0,-88.9%,down,2026-09-14
+55,delta lake,1,1.0,0.0,0.0%,stable,2026-09-14
+56,fine tuning,1,1.0,0.0,0.0%,stable,2026-09-14
+57,flink,1,1.0,0.0,0.0%,stable,2026-09-14
+58,gemini,1,1.5,-0.5,-33.3%,stable,2026-09-14
+59,gpt,1,1.0,0.0,0.0%,stable,2026-09-14
+60,hadoop,1,4.0,-3.0,-75.0%,stable,2026-09-14
+61,hex,1,1.2,-0.2,-16.7%,stable,2026-09-14
+62,kafka,1,1.0,0.0,0.0%,stable,2026-09-14
+63,kubernetes,1,1.0,0.0,0.0%,stable,2026-09-14
+64,looker,1,2.8,-1.8,-64.3%,stable,2026-09-14
+65,marketing analytics,1,27.2,-26.2,-96.3%,down,2026-09-14
+66,mysql,1,2.0,-1.0,-50.0%,stable,2026-09-14
+67,power query,1,2.3,-1.3,-56.5%,stable,2026-09-14
+68,predictive modeling,1,3.3,-2.3,-69.7%,stable,2026-09-14
+69,product analytics,1,6.5,-5.5,-84.6%,down,2026-09-14
+70,pyspark,1,2.2,-1.2,-54.5%,stable,2026-09-14
+71,scala,1,1.0,0.0,0.0%,stable,2026-09-14
