@@ -1,0 +1,90 @@
+rank,skill,count,four_week_avg,change_vs_avg,pct_change,trend,week_start
+1,artificial intelligence,388,359.0,+29.0,8.1%,up,2026-10-09
+2,databricks,267,260.5,+6.5,2.5%,up,2026-10-09
+3,business intelligence,217,133.8,+83.2,62.2%,up,2026-10-09
+4,sql,104,56.2,+47.8,85.1%,up,2026-10-09
+5,ai agents,53,49.0,+4.0,8.2%,stable,2026-10-09
+6,power bi,50,20.8,+29.2,140.4%,up,2026-10-09
+7,data pipeline,39,39.5,-0.5,-1.3%,stable,2026-10-09
+8,tableau,34,10.2,+23.8,233.3%,up,2026-10-09
+9,excel,32,7.2,+24.8,344.4%,up,2026-10-09
+10,python,31,9.0,+22.0,244.4%,up,2026-10-09
+11,etl,30,24.0,+6.0,25.0%,up,2026-10-09
+12,snowflake,28,8.8,+19.2,218.2%,up,2026-10-09
+13,spark,25,23.5,+1.5,6.4%,stable,2026-10-09
+14,data quality,24,26.2,-2.2,-8.4%,stable,2026-10-09
+15,machine learning,24,12.2,+11.8,96.7%,up,2026-10-09
+16,requirements gathering,22,8.0,+14.0,175.0%,up,2026-10-09
+17,data modeling,20,7.5,+12.5,166.7%,up,2026-10-09
+18,forecasting,19,5.2,+13.8,265.4%,up,2026-10-09
+19,kpi,16,11.8,+4.2,35.6%,stable,2026-10-09
+20,data governance,15,10.5,+4.5,42.9%,stable,2026-10-09
+21,dashboarding,15,6.2,+8.8,141.9%,up,2026-10-09
+22,typescript,13,3.5,+9.5,271.4%,up,2026-10-09
+23,statistics,12,3.8,+8.2,215.8%,up,2026-10-09
+24,marketing analytics,12,2.8,+9.2,328.6%,up,2026-10-09
+25,oracle,12,17.5,-5.5,-31.4%,down,2026-10-09
+26,azure,11,4.2,+6.8,161.9%,up,2026-10-09
+27,iceberg,10,10.0,0.0,0.0%,stable,2026-10-09
+28,dbt,10,8.5,+1.5,17.6%,stable,2026-10-09
+29,aws,10,7.5,+2.5,33.3%,stable,2026-10-09
+30,elt,9,1.0,+8.0,800.0%,up,2026-10-09
+31,gcp,9,14.2,-5.2,-36.6%,down,2026-10-09
+32,generative ai,8,5.5,+2.5,45.5%,stable,2026-10-09
+33,microsoft fabric,6,3.2,+2.8,87.5%,stable,2026-10-09
+34,fivetran,6,3.8,+2.2,57.9%,stable,2026-10-09
+35,attribution,6,1.0,+5.0,500.0%,stable,2026-10-09
+36,llm,6,49.0,-43.0,-87.8%,down,2026-10-09
+37,bigquery,6,1.0,+5.0,500.0%,stable,2026-10-09
+38,experimentation,5,4.8,+0.2,4.2%,stable,2026-10-09
+39,sigma,5,5.0,0.0,0.0%,stable,2026-10-09
+40,dax,5,2.0,+3.0,150.0%,stable,2026-10-09
+41,java,5,1.5,+3.5,233.3%,stable,2026-10-09
+42,qlik,5,3.2,+1.8,56.2%,stable,2026-10-09
+43,feature engineering,5,3.0,+2.0,66.7%,stable,2026-10-09
+44,looker,4,2.5,+1.5,60.0%,stable,2026-10-09
+45,claude,4,4.2,-0.2,-4.8%,stable,2026-10-09
+46,master data management,4,4.2,-0.2,-4.8%,stable,2026-10-09
+47,mlops,4,2.0,+2.0,100.0%,stable,2026-10-09
+48,postgresql,4,4.2,-0.2,-4.8%,stable,2026-10-09
+49,stakeholder management,4,2.5,+1.5,60.0%,stable,2026-10-09
+50,product analytics,3,2.8,+0.2,7.1%,stable,2026-10-09
+51,domo,3,3.2,-0.2,-6.2%,stable,2026-10-09
+52,classification,3,1.0,+2.0,200.0%,stable,2026-10-09
+53,copilot,3,3.0,0.0,0.0%,stable,2026-10-09
+54,web analytics,3,1.0,+2.0,200.0%,stable,2026-10-09
+55,sas,3,2.0,+1.0,50.0%,stable,2026-10-09
+56,rag,3,3.0,0.0,0.0%,stable,2026-10-09
+57,data storytelling,3,1.0,+2.0,200.0%,stable,2026-10-09
+58,javascript,2,1.0,+1.0,100.0%,stable,2026-10-09
+59,kubernetes,2,1.0,+1.0,100.0%,stable,2026-10-09
+60,thoughtspot,2,2.0,0.0,0.0%,stable,2026-10-09
+61,metadata management,2,1.0,+1.0,100.0%,stable,2026-10-09
+62,airflow,2,1.2,+0.8,66.7%,stable,2026-10-09
+63,power query,2,1.7,+0.3,17.6%,stable,2026-10-09
+64,pyspark,2,1.2,+0.8,66.7%,stable,2026-10-09
+65,delta lake,2,1.0,+1.0,100.0%,stable,2026-10-09
+66,regression,2,3.0,-1.0,-33.3%,stable,2026-10-09
+67,scala,2,1.0,+1.0,100.0%,stable,2026-10-09
+68,scikit-learn,2,1.0,+1.0,100.0%,stable,2026-10-09
+69,azure synapse,2,1.8,+0.2,11.1%,stable,2026-10-09
+70,hex,2,1.0,+1.0,100.0%,stable,2026-10-09
+71,azure data factory,1,1.7,-0.7,-41.2%,stable,2026-10-09
+72,git,1,n/a,n/a,n/a,new,2026-10-09
+73,github,1,n/a,n/a,n/a,new,2026-10-09
+74,aws glue,1,1.0,0.0,0.0%,stable,2026-10-09
+75,data lineage,1,2.5,-1.5,-60.0%,stable,2026-10-09
+76,gitlab,1,1.0,0.0,0.0%,stable,2026-10-09
+77,hive,1,n/a,n/a,n/a,new,2026-10-09
+78,hadoop,1,1.0,0.0,0.0%,stable,2026-10-09
+79,gpt,1,1.0,0.0,0.0%,stable,2026-10-09
+80,clustering,1,1.0,0.0,0.0%,stable,2026-10-09
+81,flink,1,1.0,0.0,0.0%,stable,2026-10-09
+82,kafka,1,1.0,0.0,0.0%,stable,2026-10-09
+83,fine tuning,1,1.0,0.0,0.0%,stable,2026-10-09
+84,pivot tables,1,n/a,n/a,n/a,new,2026-10-09
+85,vector search,1,1.0,0.0,0.0%,stable,2026-10-09
+86,marketing mix modeling,1,n/a,n/a,n/a,new,2026-10-09
+87,incrementality,1,n/a,n/a,n/a,new,2026-10-09
+88,gemini,1,1.0,0.0,0.0%,stable,2026-10-09
+89,jira,1,3.0,-2.0,-66.7%,stable,2026-10-09
