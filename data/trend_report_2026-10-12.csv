@@ -1,0 +1,85 @@
+rank,skill,count,four_week_avg,change_vs_avg,pct_change,trend,week_start
+1,artificial intelligence,316,383.0,-67.0,-17.5%,down,2026-10-12
+2,databricks,262,262.0,0.0,0.0%,stable,2026-10-12
+3,business intelligence,124,156.5,-32.5,-20.8%,down,2026-10-12
+4,sql,71,71.8,-0.8,-1.1%,stable,2026-10-12
+5,attribution,46,2.7,+43.3,1603.7%,up,2026-10-12
+6,ai agents,45,50.8,-5.8,-11.4%,down,2026-10-12
+7,forecasting,35,8.0,+27.0,337.5%,up,2026-10-12
+8,power bi,34,26.8,+7.2,26.9%,up,2026-10-12
+9,python,29,14.0,+15.0,107.1%,up,2026-10-12
+10,etl,26,28.2,-2.2,-7.8%,stable,2026-10-12
+11,data pipeline,25,32.8,-7.8,-23.8%,down,2026-10-12
+12,spark,24,24.0,0.0,0.0%,stable,2026-10-12
+13,tableau,20,16.0,+4.0,25.0%,stable,2026-10-12
+14,machine learning,19,15.8,+3.2,20.3%,stable,2026-10-12
+15,data quality,18,27.2,-9.2,-33.8%,down,2026-10-12
+16,requirements gathering,17,12.2,+4.8,39.3%,stable,2026-10-12
+17,snowflake,16,14.2,+1.8,12.7%,stable,2026-10-12
+18,data modeling,14,8.8,+5.2,59.1%,up,2026-10-12
+19,aws,13,6.8,+6.2,91.2%,up,2026-10-12
+20,excel,13,13.5,-0.5,-3.7%,stable,2026-10-12
+21,dbt,12,8.5,+3.5,41.2%,stable,2026-10-12
+22,iceberg,10,10.0,0.0,0.0%,stable,2026-10-12
+23,kpi,9,12.2,-3.2,-26.2%,stable,2026-10-12
+24,statistics,9,6.0,+3.0,50.0%,stable,2026-10-12
+25,dashboarding,8,9.2,-1.2,-13.0%,stable,2026-10-12
+26,data governance,8,11.8,-3.8,-32.2%,stable,2026-10-12
+27,azure,7,6.5,+0.5,7.7%,stable,2026-10-12
+28,oracle,7,18.0,-11.0,-61.1%,down,2026-10-12
+29,marketing analytics,7,5.0,+2.0,40.0%,stable,2026-10-12
+30,generative ai,6,6.2,-0.2,-3.2%,stable,2026-10-12
+31,sigma,6,5.0,+1.0,20.0%,stable,2026-10-12
+32,elt,5,5.0,0.0,0.0%,stable,2026-10-12
+33,llm,5,49.2,-44.2,-89.8%,down,2026-10-12
+34,typescript,5,5.5,-0.5,-9.1%,stable,2026-10-12
+35,postgresql,5,4.2,+0.8,19.0%,stable,2026-10-12
+36,claude,4,4.2,-0.2,-4.8%,stable,2026-10-12
+37,feature engineering,4,3.5,+0.5,14.3%,stable,2026-10-12
+38,dax,4,2.2,+1.8,81.8%,stable,2026-10-12
+39,dagster,4,14.0,-10.0,-71.4%,down,2026-10-12
+40,copilot,3,3.0,0.0,0.0%,stable,2026-10-12
+41,fivetran,3,4.5,-1.5,-33.3%,stable,2026-10-12
+42,domo,3,3.2,-0.2,-6.2%,stable,2026-10-12
+43,gcp,3,9.8,-6.8,-69.4%,down,2026-10-12
+44,experimentation,3,5.0,-2.0,-40.0%,stable,2026-10-12
+45,rag,3,3.0,0.0,0.0%,stable,2026-10-12
+46,bigquery,3,2.2,+0.8,36.4%,stable,2026-10-12
+47,power query,3,1.3,+1.7,130.8%,stable,2026-10-12
+48,microsoft fabric,3,3.8,-0.8,-21.1%,stable,2026-10-12
+49,data storytelling,2,2.0,0.0,0.0%,stable,2026-10-12
+50,aws glue,2,1.0,+1.0,100.0%,stable,2026-10-12
+51,azure synapse,2,2.0,0.0,0.0%,stable,2026-10-12
+52,classification,2,1.5,+0.5,33.3%,stable,2026-10-12
+53,github,2,1.0,+1.0,100.0%,stable,2026-10-12
+54,kafka,2,1.0,+1.0,100.0%,stable,2026-10-12
+55,master data management,2,4.2,-2.2,-52.4%,stable,2026-10-12
+56,mlops,2,2.5,-0.5,-20.0%,stable,2026-10-12
+57,thoughtspot,2,2.0,0.0,0.0%,stable,2026-10-12
+58,mongodb,1,n/a,n/a,n/a,new,2026-10-12
+59,numpy,1,n/a,n/a,n/a,new,2026-10-12
+60,looker studio,1,n/a,n/a,n/a,new,2026-10-12
+61,pandas,1,n/a,n/a,n/a,new,2026-10-12
+62,pivot tables,1,1.0,0.0,0.0%,stable,2026-10-12
+63,looker,1,2.5,-1.5,-60.0%,stable,2026-10-12
+64,kubernetes,1,1.2,-0.2,-16.7%,stable,2026-10-12
+65,jira,1,2.3,-1.3,-56.5%,stable,2026-10-12
+66,product analytics,1,2.8,-1.8,-64.3%,stable,2026-10-12
+67,pyspark,1,1.5,-0.5,-33.3%,stable,2026-10-12
+68,java,1,2.7,-1.7,-63.0%,stable,2026-10-12
+69,qlik,1,4.0,-3.0,-75.0%,stable,2026-10-12
+70,hex,1,1.2,-0.2,-16.7%,stable,2026-10-12
+71,redshift,1,n/a,n/a,n/a,new,2026-10-12
+72,regression,1,2.5,-1.5,-60.0%,stable,2026-10-12
+73,hadoop,1,1.0,0.0,0.0%,stable,2026-10-12
+74,sas,1,2.0,-1.0,-50.0%,stable,2026-10-12
+75,scala,1,1.2,-0.2,-16.7%,stable,2026-10-12
+76,gpt,1,1.0,0.0,0.0%,stable,2026-10-12
+77,gemini,1,1.0,0.0,0.0%,stable,2026-10-12
+78,flink,1,1.0,0.0,0.0%,stable,2026-10-12
+79,fine tuning,1,1.0,0.0,0.0%,stable,2026-10-12
+80,delta lake,1,1.2,-0.2,-16.7%,stable,2026-10-12
+81,clustering,1,1.0,0.0,0.0%,stable,2026-10-12
+82,vector search,1,1.0,0.0,0.0%,stable,2026-10-12
+83,marketing mix modeling,1,1.0,0.0,0.0%,stable,2026-10-12
+84,airflow,1,1.5,-0.5,-33.3%,stable,2026-10-12
